@@ -15,11 +15,10 @@
     </properties>
 
     <dependencies>
-        <!-- JUnit 5 API and TestEngine -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.10.2</version> <!-- You can check for newer versions -->
+            <version>5.10.2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -50,6 +49,21 @@
                 </execution>
             </executions>
         </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <mainClass>inclassAssignment1.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
